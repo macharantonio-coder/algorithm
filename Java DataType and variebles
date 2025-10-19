@@ -1,0 +1,33 @@
+1 Money without Mistake
+double price = 19.99;
+int quantity = 3;
+double taxRate = 0.11;
+double total = price * quantity * (1 + taxRate);
+System.out.println(total);
+
+2 Type Capacity Puzzle
+Number of students in a school → int
+Because student counts are whole numbers within int’s range.
+
+First letter of someone’s name → char
+Because a single character represents a letter.
+
+Light switch ON/OFF → boolean
+Because it holds only true or false.
+
+Distance between planets → longint max = 2147483647;
+System.out.println(max + 1); // Output: -2147483648
+
+Because distances are very large whole numbers
+
+3 Unexpected Results with Division
+int x = 7 / 2;    // Output: 3
+double y = 7 / 2; // Output: 3.0
+double z = 7 / 2.0; // Output: 3.5
+
+4 Literal Confusion
+long big = 3000000000L; // must add L suffix
+float f = 2.5f;          // must add f suffix
+char c = 'A';            // must use single quotes
+
+5 Overflow Experiment
