@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Student{
+    private static String a;
+    String item, price, quantity, subtotal;
+
+
+    public Student(String a, String b, String c, String d) {
+        this.item = a; 
+        this.price = b;
+        this.quauntity = c;
+        this.subtotal = d;
+    }
+
+
+    public static void main(String[] args) throws Exception {
+        ArrayList <Student> student = new ArrayList<Student>();
+
+        student.add(new Student(a:"bags", b:"100000", c:"2", d:"200000"));
+        student.add(new Student(a:"hat", b:"20000", c:"2", d:"40000"));
+
+        System.out.println("Item\tPrice\tQuantity\tSubtotal");
+        System.out.println(x:"------------------------------------------");
+        for(Student x:student) {
+            System.out.println(x.item+"\t"+x.price+"\t"+x.quantity+"\t"+x.subtotal);
+        }
+        System.out.println(x.:"-----------------------------------------");
+    }
+
+}
