@@ -1,0 +1,83 @@
+Flowchart
+Start
+  |
+  v
+Check for any pending assignments?
+  |
+  |-- No --> Relax or Revise
+  |
+  |-- Yes -->
+        |
+        v
+  List all assignments with deadlines
+        |
+        v
+  Prioritize based on urgency & difficulty
+        |
+        v
+  Select top priority assignment
+        |
+        v
+  Break assignment into smaller tasks
+        |
+        v
+  Set a timer (e.g., 25 mins - Pomodoro)
+        |
+        v
+  Work on task
+        |
+        v
+  Task completed?
+   |        |
+  No      Yes
+   |        |
+  v         v
+Take a short break  Record progress
+   |                |
+   v                v
+ Return to task   Next task?
+   |                |
+   |-- Yes <--------|
+   |
+   |-- No --> All assignments done?
+                      |
+                  No / Yes
+                      |
+                      v
+                   End / Relax
+
+2 Pseudocode
+BEGIN
+
+WHILE True DO
+    IF there are no pending assignments THEN
+        Relax or Revise
+        BREAK
+    ENDIF
+
+    List all pending assignments with deadlines
+    Prioritize assignments by urgency and difficulty
+
+    FOR each assignment in priority order DO
+        Break assignment into smaller tasks
+
+        FOR each task in assignment DO
+            Set a timer for 25 minutes (Pomodoro technique)
+            Work on task until timer ends
+
+            IF task is completed THEN
+                Record progress
+                Take a short break (5 mins)
+            ELSE
+                Take a short break and continue
+            ENDIF
+        ENDFOR
+    ENDFOR
+
+    IF all assignments are completed THEN
+        Relax
+        BREAK
+    ENDIF
+ENDWHILE
+
+END
