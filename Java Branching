@@ -1,0 +1,109 @@
+1. Grade or Not
+import java.util.Scanner;
+
+public class GradeCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter grade: ");
+        int grade = sc.nextInt();
+
+        if (grade >= 70 && grade <= 100)
+            System.out.println("pass");
+        else if (grade >= 0 && grade < 70)
+            System.out.println("fail");
+        else
+            System.out.println("invalid");
+    }
+}
+
+2. Posistive, Negative, or Zero
+import java.util.Scanner;
+
+public class NumberCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int x = sc.nextInt();
+
+        if (x > 0)
+            System.out.println(x + " is positive");
+        else if (x < 0)
+            System.out.println(x + " is negative");
+        else
+            System.out.println(x + " is zero");
+    }
+}
+
+3. Grade Classification
+import java.util.Scanner;
+
+public class GradeClassification {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter grade: ");
+        int grade = sc.nextInt();
+
+        if (grade >= 80 && grade <= 100)
+            System.out.println("A");
+        else if (grade >= 70)
+            System.out.println("B");
+        else if (grade >= 60)
+            System.out.println("C");
+        else if (grade >= 50)
+            System.out.println("D");
+        else if (grade >= 0)
+            System.out.println("F");
+        else
+            System.out.println("invalid");
+    }
+}
+
+4. Calories Calculator
+import java.util.Scanner;
+
+public class CaloriesCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Minutes running: ");
+        int runMin = sc.nextInt();
+
+        System.out.print("Minutes push-ups: ");
+        int pushMin = sc.nextInt();
+
+        System.out.print("Minutes planks: ");
+        int plankMin = sc.nextInt();
+
+        double runningCalories = (60.0 / 5) * runMin;
+        double pushupCalories = (200.0 / 30) * pushMin;
+        double plankCalories = 5.0 * plankMin;
+
+        double total = runningCalories + pushupCalories + plankCalories;
+
+        System.out.println("Total calories burned: " + total);
+    }
+}
+
+5. Find the Larger Number
+import java.util.Scanner;
+
+public class LargestNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a: ");
+        int a = sc.nextInt();
+        System.out.print("Enter b: ");
+        int b = sc.nextInt();
+        System.out.print("Enter c: ");
+        int c = sc.nextInt();
+
+        if (a >= b && a >= c)
+            System.out.println("The largest number is a = " + a);
+        else if (b >= a && b >= c)
+            System.out.println("The largest number is b = " + b);
+        else
+            System.out.println("The largest number is c = " + c);
+    }
+}
+
