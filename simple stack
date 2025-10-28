@@ -1,0 +1,75 @@
+public class simple stack {
+    
+}
+import java.util.Scanner;
+import java.util.Stack;
+
+public class MiniBrowserApp {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Stack<String> history = new Stack<>();
+        String currentUrl = null;
+
+        int choice;
+        do {
+            System.out.println("\n--- Mini Browser App ---");
+            System.out.println("1. Enter the URL");
+            System.out.println("2. Back to previous URL");
+            System.out.println("3. Show the current URL");
+            System.out.println("4. Show the history of URLs visited");
+            System.out.println("5. Exit");
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter URL : ");
+                    if (currentUrl != null) {
+                        history.push(currentUrl);
+                    }
+                    currentUrl = scanner.nextLine();
+                    System.out.println("Current URL: " + currentUrl);
+                    break;
+
+                case 2:
+                    if (!history.isEmpty()) {
+                        currentUrl = history.pop();
+                        System.out.println("Back to: " + currentUrl);
+                    } else {
+                        System.out.println("No previous URL!");
+                    }
+                    break;
+
+                case 3:
+                    if (currentUrl != null) {
+                        System.out.println("Current URL: " + currentUrl);
+                    } else {
+                        System.out.println("No URL currently open.");
+                    }
+                    break;
+
+                case 4:
+                    if (history.isEmpty()) {
+                        System.out.println("History is empty!");
+                    } else {
+                        System.out.println("History:");
+                        for (String url : history) {
+                            System.out.print(url + " ");
+                        }
+                        System.out.println();
+                    }
+                    break;
+
+                case 5:
+                    System.out.println("Exiting program...");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice!");
+            }
+
+        } while (choice != 5);
+
+        scanner.close();
+    }
