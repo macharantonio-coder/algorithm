@@ -1,0 +1,18 @@
+public class Task1 {
+    
+    public static void main(String[] args) {
+        int result = 6;
+        int a = 4;
+        
+
+        System.out.print(result + " ");
+        for (int b = -5; b >=-9; b -=2); {
+            result +=a;
+            System.out.print(result + " ");
+            result +=b;
+            System.out.print(result + " ");
+            a +=2;
+        }
+    }
+
+}
