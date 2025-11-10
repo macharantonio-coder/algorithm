@@ -1,0 +1,42 @@
+A B A B A B A B
+B A B A B A B A
+A B A B A B A B
+
+#include <stdio.h>
+
+int main() {
+    char pattern[2] = {'A', 'B'};
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 8; j++) {
+            // if row is even: A B A B ...
+            // if row is odd : B A B A ...
+            printf("%c ", pattern[(i + j) % 2]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+X _ _ _ _ _
+X X _ _ _ _
+X X X _ _ _
+X X X X _ _
+X X X X X _
+X X X X X X
+
+
+#include <stdio.h>
+
+int main() {
+    int n = 6;
+    for(int i = 1; i <= n; i++) {
+        for(int j = 1; j <= n; j++) {
+            if(j <= i)
+                printf("X ");
+            else
+                printf("_ ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
