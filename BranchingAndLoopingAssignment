@@ -1,0 +1,84 @@
+
+public class BranchingAndLoopingAssignment {
+
+    public static void main(String[] args) {
+
+
+        case1_Exchange();
+        case2_Discount();
+        case3_PasswordAttempt();
+    }
+
+    // ================================
+    // CASE 1: Calculating Exchange
+    // ================================
+    public static void case1_Exchange() {
+        System.out.println("=== CASE 1 : Calculating Exchange ===");
+
+        int totalPayment = 75000;
+        int money = 100000;
+
+        int exchange = money - totalPayment;
+
+        System.out.println("Total Payment : " + totalPayment);
+        System.out.println("Money Given   : " + money);
+        System.out.println("Exchange      : " + exchange);
+        System.out.println();
+    }
+
+    // ================================
+    // CASE 2: Payment With Discount
+    // ================================
+    public static void case2_Discount() {
+        System.out.println("=== CASE 2 : Discount Calculation ===");
+
+        int totalPayment = 250000;
+        double discount = 0;
+
+        if (totalPayment > 200000) {
+            discount = totalPayment * 0.20;
+        } else if (totalPayment > 50000) {
+            discount = totalPayment * 0.10;
+        }
+
+        double finalPayment = totalPayment - discount;
+
+        System.out.println("Total Payment : " + totalPayment);
+        System.out.println("Discount      : " + discount);
+        System.out.println("Final Payment : " + finalPayment);
+        System.out.println();
+    }
+
+    // ================================
+    // CASE 3: Password Attempt Simulation
+    // ================================
+    public static void case3_PasswordAttempt() {
+        System.out.println("=== CASE 3 : Password Attempts Simulation ===");
+
+        Scanner input = new Scanner(System.in);
+
+        String correctPassword = "admin";
+        int attempts = 0;
+        boolean loggedIn = false;
+
+        while (attempts < 3) {
+            System.out.print("Enter password: ");
+            String userInput = input.nextLine();
+
+            if (userInput.equals(correctPassword)) {
+                System.out.println("Login Successful!");
+                loggedIn = true;
+                break;
+            } else {
+                System.out.println("Wrong Password!");
+                attempts++;
+            }
+        }
+
+        if (!loggedIn) {
+            System.out.println("Account Locked!");
+        }
+
+        System.out.println();
+    }
+}
